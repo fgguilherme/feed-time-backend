@@ -1,11 +1,6 @@
 'use strict';
 const sysSettings ={
-  port     : 3000
+  port     : 3000,
+  passKey : "POPCORN WITH SALT"
 };
-
-// +  user     : 'bdiggitalcom_back',
-// +  password : '123pipoca',
-// +  database : 'bdiggitalcom_SGCF'
-
-
 module.exports = sysSettings;
