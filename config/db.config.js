@@ -4,8 +4,8 @@ const mysql = require('mysql2');
 const dbConn = mysql.createPool({
   host     : 'localhost',
   user     : 'root',
-  password : '123pipoca',
-  database : 'feedData'
+  password : 'password',
+  database : 'feed_data'
 });
 
 module.exports = dbConn;

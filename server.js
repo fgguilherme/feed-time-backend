@@ -15,6 +15,22 @@ app.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }))
 // parse requests of content-type - application/json
 app.use(bodyParser.json({limit: '50mb', extended: true}))
 
+const farmerDataRoutes = require('./src/routes/farmerData.routes')
+// using as middleware
+app.use('/api/v1/farmerdata', farmerDataRoutes)
+
+const foodRoutes = require('./src/routes/food.routes')
+// using as middleware
+app.use('/api/v1/food', foodRoutes)
+
+const foodKindRoutes = require('./src/routes/foodKind.routes')
+// using as middleware
+app.use('/api/v1/foodKind', foodKindRoutes)
+
+const locationRoutes = require('./src/routes/location.routes')
+// using as middleware
+app.use('/api/v1/location', locationRoutes)
+
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
