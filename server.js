@@ -15,9 +15,9 @@ app.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }))
 // parse requests of content-type - application/json
 app.use(bodyParser.json({limit: '50mb', extended: true}))
 
-const farmerDataRoutes = require('./src/routes/farmerData.routes')
+const feederDataRoutes = require('./src/routes/feederData.routes')
 // using as middleware
-app.use('/api/v1/farmerdata', farmerDataRoutes)
+app.use('/api/v1/', feederDataRoutes)
 
 const foodRoutes = require('./src/routes/food.routes')
 // using as middleware
