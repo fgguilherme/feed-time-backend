@@ -37,7 +37,7 @@ FeederData.createMulti = function (newData, result) {
     });
 };
 FeederData.readAll = function (result) {
-    dbConn.query("SELECT * FROM farmer_data", function (err, res) {
+    dbConn.query("SELECT feedTime, totalDucks, quantity, food.food AS food, kind.kind AS kind, location.location FROM `farmer_data` LEFT JOIN location on location.idlocation = location_idlocation LEFT JOIN food on food.idfood = food_idfood LEFT JOIN kind ON kind.idkind = kind_idkind", function (err, res) {
         if (err) {
             result(err, null);
         }
@@ -46,4 +46,5 @@ FeederData.readAll = function (result) {
         }
     });
 };
+
 module.exports = FeederData;
