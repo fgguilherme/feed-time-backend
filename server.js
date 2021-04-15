@@ -23,7 +23,7 @@ const foodRoutes = require('./src/routes/food.routes')
 // using as middleware
 app.use('/api/v1/food', foodRoutes)
 
-const foodKindRoutes = require('./src/routes/foodKind.routes')
+const foodKindRoutes = require('./src/routes/foodkind.routes')
 // using as middleware
 app.use('/api/v1/foodKind', foodKindRoutes)
 
